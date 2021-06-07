@@ -25,6 +25,15 @@ body {
 	color: var(--color-main);
 }
 
+a,
+a:visited {
+	text-decoration: none;
+	color: var(--color-main);
+}
+a:hover {
+	color: orange;
+}
+
 header {
 	display: flex;
 	flex-direction: column;
@@ -144,14 +153,32 @@ li::before {
 	color: var(--color-main);
 }
 .lower {
-	margin-bottom: 100px;
+	margin-bottom: 10vw;
 	margin-top: 0;
 	color: green;
+}
+
+footer {
+	display: block;
+	text-align: center;
+}
+
+#end-para {
+	font-size: 20px;
+	font-weight: 600;
+	display: block;
+	text-align: center;
+}
+
+#social {
+	word-spacing: 10px;
+	margin: 0;
 }
 
 @media screen and (max-width: 930px) {
 	body {
 		margin: 0;
+		position: relative;
 	}
 	main {
 		margin: 0;
@@ -167,6 +194,25 @@ li::before {
 
 	li::before {
 		left: -15px;
+	}
+	.end-text {
+		font-size: 30px;
+	}
+	.lower {
+		margin-bottom: 80px;
+	}
+
+	#end-para {
+		padding-bottom: 100px;
+	}
+
+	footer {
+		display: block;
+		padding-top: 5vw;
+		left: 50%;
+		transform: translate(-50%, 0);
+		bottom: 10px;
+		position: absolute;
 	}
 }
 
@@ -193,5 +239,17 @@ li::before {
 	}
 	li::before {
 		left: -15px;
+	}
+
+	.end-text {
+		font-size: 22px;
+	}
+
+	#end-para {
+		font-size: 16px;
+	}
+
+	footer {
+		font-size: 10px;
 	}
 }
