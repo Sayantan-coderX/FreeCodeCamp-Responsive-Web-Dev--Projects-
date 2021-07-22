@@ -78,3 +78,23 @@ for (let i = 0; i < list_of_content.length; i++) {
 	listItem.append(list_of_content[i].by);
 	document.getElementById("list").append(listItem);
 }
+
+const upButton = document.querySelector("#up-button");
+
+upButton.addEventListener("click", function () {
+	window.scrollTo({
+		top: 0,
+		left: 0,
+		behavior: "smooth",
+	});
+});
+
+const hideButton = new window.IntersectionObserver((entry) => {
+	if (entry[0].isIntersecting) {
+		upButton.style.visibility = "hidden";
+	} else {
+		upButton.style.visibility = "visible";
+	}
+});
+
+hideButton.observe(document.querySelector("#img-div"));
